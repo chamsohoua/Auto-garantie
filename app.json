@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Auto Garantie",
+    "slug": "Auto-Garantie",
+    "scheme": "autogarantie",
+    "version": "1.0.8",
+    "orientation": "portrait",
+    "icon": "./assets/icon1.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "assets/models/*"
+    ],
+    "splash": {
+      "image": "./assets/icon1.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B3971"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon1.png",
+        "backgroundColor": "#0B3971"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.chamsoft.AutoGarantie"
+    },
+    "web": {
+      "favicon": "./assets/icon1.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-web-browser",
+      "expo-video"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2c4af514-fe73-47b8-b658-7329f47ef0aa"
+      }
+    }
+  }
+}
