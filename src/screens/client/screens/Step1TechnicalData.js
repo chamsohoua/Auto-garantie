@@ -318,7 +318,7 @@ const createStyles = (colors) => StyleSheet.create({
   fuelText:       { fontFamily: Typography.fontFamily.medium, fontSize: Typography.fontSize.sm, color: colors.textSecondary },
   fuelTextActive: { fontFamily: Typography.fontFamily.bold,   fontSize: Typography.fontSize.sm, color: "#fff" },
 
-  // Dropdown — mirrors HomeScreen ddWrap pattern
+  
   ddWrap: {
     height: 54,
     borderWidth: 1, borderColor: colors.border,
