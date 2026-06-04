@@ -43,10 +43,7 @@ const WILAYAS = [
 
 const INITIAL_FORM = {
   brand: '', model: '', year: '', category_id: '', category_label: '',
-  part_reference: '', description: '', budget_dzd: '', wilaya: '',
-};
-
-// ─── PickerModal ──────────────────────────────────────────────────────────────
+  part_reference: '', description: '', budget_dzd: '', 
 const PickerModal = React.memo(function PickerModal({ visible, title, options, onSelect, onClose, colors }) {
   const styles  = createStyles(colors);
   const slideUp = useRef(new Animated.Value(600)).current;
@@ -100,7 +97,7 @@ const PickerModal = React.memo(function PickerModal({ visible, title, options, o
   );
 });
 
-// ─── Dropdown ─────────────────────────────────────────────────────────────────
+
 const Dropdown = React.memo(function Dropdown({ label, value, placeholder, onPress, colors }) {
   const styles = createStyles(colors);
   return (
@@ -116,7 +113,6 @@ const Dropdown = React.memo(function Dropdown({ label, value, placeholder, onPre
   );
 });
 
-// ─── Sec ──────────────────────────────────────────────────────────────────────
 const Sec = React.memo(function Sec({ label, colors }) {
   const styles = createStyles(colors);
   return (
@@ -127,13 +123,13 @@ const Sec = React.memo(function Sec({ label, colors }) {
   );
 });
 
-// ─── FieldLabel ───────────────────────────────────────────────────────────────
+
 const FieldLabel = React.memo(function FieldLabel({ label, colors }) {
   const styles = createStyles(colors);
   return <Text style={styles.fieldLabel}>{label}</Text>;
 });
 
-// ─── PartRequestScreen ────────────────────────────────────────────────────────
+
 export default function PartRequestScreen({ navigation }) {
   const { colors } = useTheme();
   const styles     = createStyles(colors);
@@ -214,7 +210,7 @@ export default function PartRequestScreen({ navigation }) {
     <View style={styles.root}>
       <StatusBar barStyle="light-content" backgroundColor={colors.primary} translucent={false} />
 
-      {/* Header */}
+    
       <View style={[styles.header, { paddingTop: insets.top + 12 }]}>
         <View style={styles.hdrBlob1} />
         <View style={styles.hdrBlob2} />
@@ -232,15 +228,13 @@ export default function PartRequestScreen({ navigation }) {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
       >
-        {/* Info banner */}
+      
         <View style={styles.infoBox}>
           <Ionicons name="information-circle" size={22} color={colors.actionBlue} />
           <Text style={styles.infoText}>
             أدخل تفاصيل القطعة التي تبحث عنها، وسنقوم بتوصيل طلبك للمتاجر المعتمدة.
           </Text>
-        </View>
-
-        {/* ── Car info ── */}
+        
         <Sec label="معلومات السيارة (اختياري)" colors={colors} />
         <View style={styles.sectionBox}>
           <Dropdown
@@ -276,7 +270,7 @@ export default function PartRequestScreen({ navigation }) {
           </View>
         </View>
 
-        {/* ── Part details ── */}
+        
         <Sec label="تفاصيل القطعة *" colors={colors} />
         <View style={styles.sectionBox}>
           <Dropdown
@@ -311,9 +305,7 @@ export default function PartRequestScreen({ navigation }) {
               multiline
             />
           </View>
-        </View>
-
-        {/* ── Extra info ── */}
+        
         <Sec label="معلومات إضافية" colors={colors} />
         <View style={styles.sectionBox}>
           <View style={styles.ddWrap}>
@@ -391,12 +383,12 @@ const createStyles = (colors) => StyleSheet.create({
     textAlign: 'center',
   },
 
-  // Content
+  
   content:    { padding: Spacing.base, paddingBottom: 60 },
   sectionBox: { gap: 10, marginBottom: 4 },
   row:        { flexDirection: 'row-reverse', gap: 10 },
 
-  // Info banner
+  
   infoBox: {
     flexDirection: 'row-reverse',
     backgroundColor: colors.actionBlue + '12',
