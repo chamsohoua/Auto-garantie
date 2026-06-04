@@ -387,7 +387,7 @@ const createStyles = (colors) => StyleSheet.create({
   ordersSection:      { paddingHorizontal: 16, paddingTop: 10, marginBottom: 8 },
   sectionTitle:       { fontSize: 20, fontWeight: 'bold', color: colors.text, marginBottom: 12 },
 
-  // listings
+  
   listingsSection:    { gap: 12 },
   listingStatsRow:    { flexDirection: 'row-reverse', gap: 8, marginBottom: 8 },
   listingStatChip:    { flex: 1, alignItems: 'center', paddingVertical: 8, borderRadius: 10, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.surface },
@@ -398,7 +398,7 @@ const createStyles = (colors) => StyleSheet.create({
   emptyListingsTitle: { fontSize: 16, fontWeight: '600', color: colors.text },
   emptyListingsSub:   { fontSize: 13, color: colors.textSecondary },
 
-  // orders
+  
   tabsContainer:      { flexDirection: 'row', backgroundColor: colors.surface, borderRadius: 10, padding: 4, marginBottom: 16 },
   tab:                { flex: 1, paddingVertical: 10, alignItems: 'center', borderRadius: 8 },
   activeTab:          { backgroundColor: colors.primary },
