@@ -16,10 +16,7 @@ const TIPS = [
   'التقط الصور في ضوء النهار الطبيعي',
   'نظّف السيارة قبل التصوير',
   'صوّر من زوايا متعددة',
-  'أظهر أي عيوب بوضوح لبناء الثقة',
-];
-
-// ─── CameraIcon ───────────────────────────────────────────────────────────────
+  'أظهر أي عيوب بوضوح لبناء' ]
 const CameraIcon = React.memo(function CameraIcon({ size = 28, color }) {
   return (
     <View style={{ width: size, height: size * 0.76, alignItems: 'center', justifyContent: 'center' }}>
@@ -31,17 +28,13 @@ const CameraIcon = React.memo(function CameraIcon({ size = 28, color }) {
   );
 });
 
-// ─── XIcon ────────────────────────────────────────────────────────────────────
-const XIcon = React.memo(function XIcon({ size = 12 }) {
+
+const XIcon = React.memo(function XIcon({ size = 12 })
   return (
     <View style={{ width: size, height: size, position: 'relative' }}>
       <View style={{ position: 'absolute', width: size, height: 2, backgroundColor: '#fff', top: size / 2 - 1, borderRadius: 1, transform: [{ rotate: '45deg' }] }} />
       <View style={{ position: 'absolute', width: size, height: 2, backgroundColor: '#fff', top: size / 2 - 1, borderRadius: 1, transform: [{ rotate: '-45deg' }] }} />
-    </View>
-  );
-});
-
-// ─── PhotoSlot ────────────────────────────────────────────────────────────────
+  </View>
 const PhotoSlot = React.memo(function PhotoSlot({ slot, uri, onPick, onDelete, colors }) {
   const styles = createStyles(colors);
   const scale  = useRef(new Animated.Value(1)).current;
@@ -108,7 +101,7 @@ const PhotoSlot = React.memo(function PhotoSlot({ slot, uri, onPick, onDelete, c
   prev.colors   === next.colors
 );
 
-// ─── PhotoProgress ────────────────────────────────────────────────────────────
+
 const PhotoProgress = React.memo(function PhotoProgress({ photos, mandatory, colors }) {
   const styles          = createStyles(colors);
   const total           = PHOTO_SLOTS.length;
@@ -132,7 +125,7 @@ const PhotoProgress = React.memo(function PhotoProgress({ photos, mandatory, col
   );
 });
 
-// ─── Step3PhotoUpload ─────────────────────────────────────────────────────────
+
 export default function Step3PhotoUpload() {
   const { colors } = useTheme();
   const styles     = createStyles(colors);
@@ -207,11 +200,11 @@ export default function Step3PhotoUpload() {
   );
 }
 
-// ─── Styles ───────────────────────────────────────────────────────────────────
+
 const createStyles = (colors) => StyleSheet.create({
   scroll:        { paddingHorizontal: Spacing.base, paddingTop: Spacing.base, paddingBottom: 40 },
 
-  // Info box
+ 
   infoBox:       { flexDirection: 'row-reverse', backgroundColor: colors.actionBlue + '12', borderRadius: Radius.md, padding: Spacing.base, marginBottom: Spacing.base, gap: Spacing.sm, alignItems: 'flex-start', borderWidth: 1, borderColor: colors.actionBlue + '33' },
   infoIconWrap:  { width: 36, height: 36, borderRadius: 18, backgroundColor: colors.actionBlue, alignItems: 'center', justifyContent: 'center', marginTop: 2 },
   infoIcon:      { fontSize: 18 },
@@ -221,7 +214,7 @@ const createStyles = (colors) => StyleSheet.create({
 
   grid:          { flexDirection: 'row-reverse', flexWrap: 'wrap', gap: '3.5%', marginBottom: Spacing.base },
 
-  // PhotoSlot
+  
   psOuter:            { width: '31%', alignItems: 'center', gap: 4 },
   psCell:             { width: '100%', aspectRatio: 1, borderRadius: Radius.md, borderWidth: 1.5, borderColor: colors.border, borderStyle: 'dashed', backgroundColor: colors.surface, overflow: 'hidden', alignItems: 'center', justifyContent: 'center' },
   psCellFilled:       { borderStyle: 'solid', borderColor: colors.success },
@@ -239,7 +232,7 @@ const createStyles = (colors) => StyleSheet.create({
   psLabelMandatory:   { color: colors.textPrimary },
   psAsterisk:         { fontFamily: Typography.fontFamily.bold, fontSize: 11, color: colors.error, lineHeight: 14 },
 
-  // PhotoProgress
+  
   progWrap:       { backgroundColor: colors.surface, borderRadius: Radius.md, padding: Spacing.base, marginBottom: Spacing.base, borderWidth: 0.5, borderColor: colors.border },
   progTextRow:    { flexDirection: 'row-reverse', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
   progRight:      { fontFamily: Typography.fontFamily.medium, fontSize: Typography.fontSize.sm, color: colors.textSecondary },
@@ -249,7 +242,7 @@ const createStyles = (colors) => StyleSheet.create({
   progTrack:      { height: 6, borderRadius: 3, backgroundColor: colors.divider, overflow: 'hidden' },
   progFill:       { height: '100%', borderRadius: 3, backgroundColor: colors.actionBlue },
 
-  // Tips card
+
   tipsCard:  { backgroundColor: colors.surface, borderRadius: Radius.lg, padding: Spacing.base, borderWidth: 0.5, borderColor: colors.border, justifyContent: 'flex-start', alignItems: 'flex-start' },
   tipsTitle: { fontFamily: Typography.fontFamily.bold, fontSize: Typography.fontSize.sm, color: colors.textPrimary, textAlign: 'left', marginBottom: Spacing.sm },
   tipRow:    { flexDirection: 'row-reverse', alignItems: 'center', gap: Spacing.sm, paddingVertical: 3, alignSelf: 'stretch' },
